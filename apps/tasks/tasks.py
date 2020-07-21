@@ -2,7 +2,7 @@ from datetime import datetime
 import time
 from .extra_tool.DbTool import conn_mysql, conn_close
 from django.forms.models import model_to_dict
-from .models import TaskMsg, SeleTable
+from tasks.models import TaskMsg, SeleTable
 from op_data.celerys import app
 
 

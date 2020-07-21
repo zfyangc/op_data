@@ -18,8 +18,12 @@ from django.contrib import admin
 from rest_framework.routers import DefaultRouter
 
 from rest_framework.documentation import include_docs_urls
+
+from apps.tasks.views import TaskCreateViewSet, TablefieldsViewSet, SeleFieldFilterViewSet
+
 router = DefaultRouter()
-from tasks.views import  TaskCreateViewSet, TablefieldsViewSet, SeleFieldFilterViewSet
+# from tasks.views import TaskCreateViewSet, TablefieldsViewSet, SeleFieldFilterViewSet
+
 
 
 router = DefaultRouter()

@@ -14,9 +14,9 @@ import os
 import sys
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, BASE_DIR)
+# sys.path.insert(0, BASE_DIR)
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
-sys.path.insert(0, os.path.join(BASE_DIR, 'op_data'))
+# sys.path.insert(0, os.path.join(BASE_DIR, 'op_data'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -39,12 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users.apps.UsersConfig',
-    'tasks.apps.TasksConfig',
+    'users',
+    'tasks',
 
 
     'rest_framework',
-    'django_filters',
+    # 'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'InduceData',
         'USER':'root',
-        'PASSWORD':'123456',
+        'PASSWORD':'root',
         'HOST':'127.0.0.1',
         'OPTIONS':{'init_command': 'SET default_storage_engine=INNODB;'},
     }
@@ -133,7 +133,7 @@ AUTH_USER_MODEL = 'users.UserProfile'
 STATIC_URL = '/static/'
 
 
-REST_FRAMEWORK= {
+REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema'
 }
 

@@ -1,7 +1,7 @@
 from abc import ABC
 
 from rest_framework import serializers
-from .models import TaskMsg, SeleTable, SeleField
+from tasks.models import TaskMsg, SeleTable, SeleField
 
 
 class TaskCreateSerializer(serializers.ModelSerializer):

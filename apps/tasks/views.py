@@ -12,7 +12,7 @@ from .serializers import TaskCreateSerializer, TableFieldsSerializer, FilterFiel
 
 from .extra_tool.DbTool import conn_mysql, conn_close
 
-from .models import TaskMsg, SeleTable
+from tasks.models import TaskMsg, SeleTable
 from .tasks import op_task1
 
 

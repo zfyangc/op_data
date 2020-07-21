@@ -1,7 +1,9 @@
 
-
 import pymysql
 # from tasks.models import TaskMsg
+# from tasks.models import TaskMsg
+from tasks.models import TaskMsg
+
 
 def conn_mysql(msg):
     db = pymysql.connect(host=msg["host"], port=msg["port"], user=msg["user"], passwd=msg["password"], db=msg["database"], charset=msg["charset"])
@@ -29,7 +31,7 @@ if __name__ == '__main__':
         'HOST': '127.0.0.1',
         'charset' : 'utf8',
                 }
-    cursor = conn_msyql(conn_msg)
+    cursor = conn_mysql(conn_msg)
     sql = 'desc users_userprofile;'
     result = cursor.execute(sql)
     print(cursor.fetchall())
